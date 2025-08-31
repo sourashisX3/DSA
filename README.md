@@ -8,7 +8,7 @@ The goal of this repo is to **improve problem-solving skills**, strengthen **cor
 ## 📌 Topics Covered
 - Arrays & Strings
 - Recursion & Backtracking
-- Linked List
+- Linked List (ongoing)
 - Hashing
 - Sorting & Searching
 
