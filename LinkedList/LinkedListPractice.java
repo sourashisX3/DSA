@@ -1,6 +1,7 @@
 class LinkedListPractice {
 
     Node head;
+
     // ------------------- Node class ------------------------
     class Node {
         int data;
@@ -53,12 +54,45 @@ class LinkedListPractice {
         System.out.println("NULL");
     }
 
+    // -------------------- delete first----------------------------
+    public void deleteFirst() {
+        if (head == null) {
+            System.out.println("EMPTY");
+            return;
+        }
+        head = head.next;
+    }
+
+    // ------------------- delete last ----------------------
+    public void deleteLast() {
+        if (head == null) {
+            System.out.println("EMPTY");
+            return;
+        }
+
+        if (head.next == null) {
+            head = null;
+            return;
+        }
+
+        Node secondLast = head;
+        Node last = head.next;
+        while (last.next != null) {
+            last = last.next;
+            secondLast = secondLast.next;
+        }
+        secondLast.next = null;
+    }
+
     public static void main(String[] args) {
         LinkedListPractice ll = new LinkedListPractice();
         ll.addFirst(5);
         ll.addFirst(10);
         ll.addLast(12);
         ll.addLast(14);
+        ll.print();
+        ll.deleteFirst();
+        ll.deleteLast();
         ll.print();
     }
 }
